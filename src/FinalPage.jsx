@@ -79,18 +79,7 @@ const LetterModal = ({ isOpen, onClose }) => {
             </div>
             <div className="letter-body">
               <div className="letter-content">
-                Mi querida Luci,
-
-                Esta carta es para ti, la persona más especial en mi vida. Cada día que paso contigo es un regalo, y aunque esta página web es algo pequeño comparado con todo lo que sientes por mí, quiero que sepas que cada detalle lo hice pensando en ti.
-
-                Eres mi luz, mi razón de sonreír, y la persona que hace que cada día valga la pena. Espero que esta pequeña sorpresa te haya hecho sonreír tanto como yo sonrío cuando pienso en ti.
-
-                Te amo más de lo que las palabras pueden expresar.
-
-                Con todo mi amor,
-                Valen 💕
-
-                P.D.: El contador de arriba cuenta los días hasta nuestro próximo encuentro especial. Cada segundo que pasa es un segundo menos para volver a estar juntos.
+                Hola mi luci, esta carta madafakin virtual es para ti mi miña, primero que nada feliz cumple bb, tienes ya 20 añotes, madre mia que rico una madura uf, bromita. Crecimos juntos mi niña, desde los 15 años que te veo todos los dias mi amor, y se que seran muchos mas, y seguro leas esta carta con 21, 22 y asi cada vez mas viejarda, como yo que triste. En unos dias nos veremos otra vez un fackin mes, es muy loco lo que voy a hacer porque osea wtf bro no se da miedo pero se que saldra todo bien, y todo sea por ver a mi niña, me gustas mucho mi amor, y sabes que eres el amor de mi vida, y creo que nunca te lo dije pero tienes un brillo propio bb, tipo donde vas iluminas a todo el mundo, eso me gusta mucho de ti y lo digo de verdad bb, tipo se que donde seas que vayas con el brillito que tienes te ira bien, porque no se si te das cuenta pero eres muy muy perfecta, y mira osea en te basto por ejemplo menos de una hora para convencer a 3 conchudas de que te aceptace en el piso, osea tienes algo bb que aunque este triste siempre esta mi niña, y es me encanta de ti, pero nada mi niña, el contador de la pagina funciona cuando quieras verlo debes en cuando miralo, te amo mucho y toy muy orgulloso de usted bb, porque a pesar de tener problemas como por ejemplo en casa, con amigos o conmigo, siempre sale adelante mi niña, y va logrando todo de apoquito y eso esta muy bien mi amor, te amo mucho, no se que mas decirle, pero eso mi amor, mañana a disfrutar con sus compas y yo a fackin estudiar y espero que le guste mi regalo de mañana aunque es pobre y no le puedo dar aun cosas chulas pero ya cuando tenga le dare cositas jeje, igual el regalo del 8 de octubre que llegara es espectacular, espero que te guste, te amo mi amor, nos vemos pronto mua ❤️
               </div>
             </div>
             <div className="letter-footer">

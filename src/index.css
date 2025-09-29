@@ -581,7 +581,6 @@ body {
   /* Modal responsive para móvil */
   .modal-overlay {
     padding: 5px;
-    align-items: flex-start;
     padding-top: 20px;
   }
   
