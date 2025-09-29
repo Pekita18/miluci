@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Para mi pochoclito</title>
+</head>
+
+<body>
+  <div class="flipbook">
+    <div class="hard">Para el amor de mi vida <small>~ de parte de valen</small></div>
+    <div class="hard">
+      <img src="images/portada.png" alt="" />
+    </div>
+    <div class="page">
+      <small>Este era un pequeño regalito por San Valentin</small>
+      <small style="margin-top: -15px;">pero ahora sera nuestro album ❤️</small>
+      <small>te amo mucho</small>
+    </div>
+    <div class="page">
+      <img src="images/luci.png" alt="" />
+    </div>
+    <div class="page">
+      <img src="images/carta.png" alt="" />
+    </div>
+    <div class="page">
+      <img src="images/foto1.png" alt="" />
+    </div>
+    <div class="page">
+      <img src="images/foto2.png" alt="" />
+    </div>
+    <div class="page">
+      <img src="images/foto3.png" alt="" />
+    </div>
+    <div class="page">
+      <img src="images/foto4.png" alt="" />
+    </div>
+    <div class="page">
+      <img src="images/foto5.png" alt="" />
+    </div>
+    <div class="page">
+      <img src="images/foto6.png" alt="" />
+    </div>
+    <div class="page">
+      <img src="images/foto7.png" alt="" />
+    </div>
+    <div class="hard" id="no-movil"></div>
+    <div class="hard">Falta poquito bb<small>~ te amoo</small></div>
+  </div>
+
+  <!-- Carrusel móvil -->
+  <div class="carousel">
+    <div class="carousel-page">
+      <div class="hard">Para el amor de mi vida <small>~ de parte de valen</small></div>
+    </div>
+    <div class="carousel-page">
+      <div class="hard">
+        <img src="images/portada.png" alt="" />
+      </div>
+    </div>
+    <div class="carousel-page">
+      <div class="page">
+        <small>Este era un pequeño regalito por San Valentin</small>
+        <small style="margin-top: -15px;">pero ahora sera nuestro album ❤️</small>
+        <small>te amo mucho</small>
+      </div>
+    </div>
+    <div class="carousel-page">
+      <div class="page">
+        <img src="./luci-libro/images/luci.png" alt="" />
+      </div>
+    </div>
+    <div class="carousel-page">
+      <div class="page">
+        <img src="images/carta.png" alt="" />
+      </div>
+    </div>
+    <div class="carousel-page">
+      <div class="page">
+        <img src="images/foto1.png" alt="" />
+      </div>
+    </div>
+    <div class="carousel-page">
+      <div class="page">
+        <img src="images/foto2.png" alt="" />
+      </div>
+    </div>
+    <div class="carousel-page">
+      <div class="page">
+        <img src="images/foto3.png" alt="" />
+      </div>
+    </div>
+    <div class="carousel-page">
+      <div class="page">
+        <img src="images/foto4.png" alt="" />
+      </div>
+    </div>
+    <div class="carousel-page">
+      <div class="page">
+        <img src="images/foto5.png" alt="" />
+      </div>
+    </div>
+    <div class="carousel-page">
+      <div class="page">
+        <img src="images/foto6.png" alt="" />
+      </div>
+    </div>
+    <div class="carousel-page">
+      <div class="page">
+        <img src="images/foto7.png" alt="" />
+      </div>
+    </div>
+    <div class="carousel-page">
+      <div class="hard"></div>
+    </div>
+    <div class="carousel-page">
+      <div class="hard">Falta poquito bb<small>~ te amoo</small></div>
+    </div>
+  </div>
+
+  <script src="jquery.js"></script>
+  <script src="turn.js"></script>
+  <script>
+    $(".flipbook").turn();
+    // Carrusel móvil
+    function isMobile() {
+      return window.innerWidth <= 600;
+    }
+    function showCarousel() {
+      document.querySelector('.flipbook').style.display = 'none';
+      document.querySelector('.carousel').style.display = 'block';
+    }
+    function hideCarousel() {
+      document.querySelector('.flipbook').style.display = 'block';
+      document.querySelector('.carousel').style.display = 'none';
+    }
+    function setupCarousel() {
+      let current = 0;
+      const pages = document.querySelectorAll('.carousel-page');
+      const carousel = document.querySelector('.carousel');
+      function showPage(idx) {
+        pages.forEach((p, i) => {
+          p.style.display = i === idx ? 'flex' : 'none';
+        });
+      }
+      showPage(current);
+      let startX = null;
+      carousel.addEventListener('touchstart', function(e) {
+        startX = e.touches[0].clientX;
+      });
+      carousel.addEventListener('touchend', function(e) {
+        if (startX === null) return;
+        let endX = e.changedTouches[0].clientX;
+        if (endX < startX - 30 && current < pages.length - 1) {
+          current++;
+          showPage(current);
+        } else if (endX > startX + 30 && current > 0) {
+          current--;
+          showPage(current);
+        }
+        startX = null;
+      });
+    }
+    function responsiveView() {
+      if (isMobile()) {
+        showCarousel();
+        setupCarousel();
+      } else {
+        hideCarousel();
+      }
+    }
+    window.addEventListener('resize', responsiveView);
+    window.addEventListener('DOMContentLoaded', responsiveView);
+  </script>
+</body>
+
+</html>
